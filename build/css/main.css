@@ -99,12 +99,38 @@ label {
 .btn {
   padding: 8px 12px;
   border: 0;
-  background: transparent;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 1.42857143;
+  border-radius: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn-primary {
+  color: #ffffff;
+  background-color: #0dbae8;
+  border-color: #0ca7d0;
 }
 
 .wrapper {
@@ -160,12 +186,35 @@ label {
 }
 
 .top-panel .logo-area img {
-  display: block;
   margin: 0 auto 15px;
+}
+
+.top-panel .logo-area a {
+  color: #474747;
+}
+
+.top-panel .logo-area a:hover {
+  text-decoration: none;
+  opacity: .7;
+}
+
+@media (max-width: 992px) {
+  .top-panel .logo-area {
+    text-align: center;
+  }
+  .top-panel .logo-area span {
+    display: inline-block;
+  }
 }
 
 .top-panel .search-area {
   padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .top-panel .search-area {
+    text-align: center;
+  }
 }
 
 .top-panel .search-area p {
@@ -219,17 +268,12 @@ label {
   margin-left: 10px;
   color: #ff6100;
   font-size: 24px;
+  line-height: .8;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-}
-
-@media (max-width: 992px) {
-  .top-panel .contacts .fa {
-    display: none;
-  }
 }
 
 .top-panel .contacts .phone {
@@ -243,6 +287,12 @@ label {
   font-size: 28px;
 }
 
+@media (max-width: 992px) {
+  .top-panel .contacts .phone .fa {
+    display: none;
+  }
+}
+
 .top-panel .contacts .phone:hover {
   text-decoration: none;
 }
@@ -253,13 +303,21 @@ label {
   background-color: transparent;
 }
 
+@media (min-width: 769px) {
+  .top-panel .contacts .write-us span {
+    vertical-align: middle;
+  }
+}
+
 @media (max-width: 992px) {
   .top-panel .contacts .write-us {
     color: #ff8401;
-    border-bottom: 1px solid;
   }
-  .top-panel .contacts .write-us:hover {
-    border-color: transparent;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .top-panel .contacts .write-us .text {
+    display: none;
   }
 }
 

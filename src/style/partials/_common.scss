@@ -96,8 +96,32 @@ label {
 .btn {
   padding: 8px 12px;
   border: 0;
-  background: transparent;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 1.42857143;
+  border-radius: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   @include transition(all .3s ease);
+  &:focus {
+    outline: 0;
+  }
+  &-primary {
+    color: #ffffff;
+    background-color: #0dbae8;
+    border-color: #0ca7d0;
+  }
 }
 
 .wrapper {

@@ -3,12 +3,27 @@
   background-color: #fff;
   .logo-area {
     img {
-      display: block;
       margin: 0 auto 15px;
+    }
+    a {
+     color: #474747;
+      &:hover {
+        text-decoration: none;
+        opacity: .7;
+      }
+    }
+    @include to('m') {
+      text-align: center;
+      span {
+        display: inline-block;
+      }
     }
   }
   .search-area {
     padding-top: 10px;
+    @include to('s') {
+      text-align: center;
+    }
     p {
       margin-bottom: 20px;
     }
@@ -43,10 +58,8 @@
       margin-left: 10px;
       color: #ff6100;
       font-size: 24px;
+      line-height: .8;
       @include transition(all .3s ease);
-      @include to('m') {
-        display: none;
-      }
     }
     .phone {
       margin-bottom: 10px;
@@ -55,6 +68,9 @@
       display: inline-block;
       .fa {
         font-size: 28px;
+        @include to('m') {
+          display: none;
+        }
       }
       &:hover {
         text-decoration: none;
@@ -64,11 +80,17 @@
       padding: 0;
       border: 0;
       background-color: transparent;
+      @include from('m') {
+        span {
+          vertical-align: middle;
+        }
+      }
       @include to('m') {
         color: #ff8401;
-        border-bottom: 1px solid;
-        &:hover {
-          border-color: transparent;
+      }
+      @include at('s') {
+        .text {
+          display: none;
         }
       }
     }

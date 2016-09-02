@@ -1,4 +1,4 @@
-// Актальный год в подвале сайта
+// Актульный год в подвале сайта
 var dateMy = new Date();
 var year = dateMy.getFullYear();
 document.getElementById('year').innerHTML = year;
@@ -30,14 +30,6 @@ $(document).ready(function () {
         slideSpeed: 300,
         paginationSpeed: 400,
         singleItem: true
-
-        // "singleItem:true" is a shortcut for:
-        // items : 1,
-        // itemsDesktop : false,
-        // itemsDesktopSmall : false,
-        // itemsTablet: false,
-        // itemsMobile : false
-
     });
     $(".forth").click(function () {
         sl.trigger('owl.next');
@@ -50,12 +42,11 @@ $(document).ready(function () {
 
     prod.owlCarousel({
         navigation: false,
-        items: 5, //10 items above 1000px browser width
-        itemsDesktop: [1000, 5], //5 items between 1000px and 901px
-        itemsDesktopSmall: [900, 3], // betweem 900px and 601px
-        itemsTablet: [600, 2], //2 items between 600 and 0
-        itemsMobile: false // itemsMobile disabled - inherit from itemsTablet option
-
+        items: 5,
+        itemsDesktop: [1000, 5],
+        itemsDesktopSmall: [900, 3],
+        itemsTablet: [600, 2],
+        itemsMobile: false
     });
 
     $(".next").click(function () {
@@ -69,16 +60,6 @@ $(document).ready(function () {
     $(".menu-toggle").click(function () {
         $('.menu').toggleClass("open-menu");
     });
-
-    //Кнопка вверх
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $('.scrollup').fadeIn();
-        } else {
-            $('.scrollup').fadeOut();
-        }
-    });
-
 
     //Плавная прокрутка к якорям на странице
     $("body").on('click', '[href*="#"]', function (e) {
