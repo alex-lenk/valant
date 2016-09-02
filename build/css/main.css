@@ -191,6 +191,7 @@ label {
 
 .top-panel .logo-area a {
   color: #474747;
+  display: inline-block;
 }
 
 .top-panel .logo-area a:hover {
