@@ -1,0 +1,32 @@
+.advantages {
+  margin-bottom: 50px;
+  ul {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    li {
+      text-align: center;
+      line-height: 1.4;
+      cursor: default;
+      @include to('s') {
+        &:not(:last-of-type) {
+          margin-bottom: 25px;
+          padding-right: 15px;
+        }
+      }
+      @include to('xs') {
+        width: 100%;
+      }
+      span {
+        display: block
+      }
+      .fa {
+        font-size: 45px;
+        color: #2e4a67;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

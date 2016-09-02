@@ -1,0 +1,28 @@
+.producers {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  .col-xs-12 {
+    position: relative;
+  }
+  .owl-wrapper {
+    display: flex !important;
+    align-items: center;
+  }
+  .item {
+    text-align: center;
+  }
+  .control {
+    padding: 0;
+    li {
+      color: #2e4a67;
+      font-size: 50px;
+      right: 25px;
+      &:hover {
+        color: #ff6100;
+      }
+      &:first-child {
+        left: 25px;
+      }
+    }
+  }
+}

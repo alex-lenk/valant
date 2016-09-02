@@ -1,0 +1,56 @@
+@import 'partials/mixins';
+@import 'lib/breakpoint';
+@import 'lib/breakpoint-slicer';
+@import "partials/common";
+@import "partials/top-panel";
+@import "partials/menu";
+@import "partials/producers";
+@import "partials/advantages";
+@import "partials/news-area";
+@import "partials/have-questions";
+@import "partials/footer";
+
+.content {
+  margin-bottom: 50px;
+}
+
+#toTop {
+  width: 45px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  display: none;
+  color: #6c8299;
+  text-align: center;
+  font-size: 13px;
+  @include transition(all .3s ease);
+  .fa {
+    height: 45px;
+    font-size: 40px;
+    display: block;
+    color: #fff;
+    background: #6c8299;
+  }
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.company-nonames,
+.modal-body .form-group:first-of-type {
+  visibility: hidden;
+  position: absolute;
+}
+
+.contact-form .input-group {
+  margin-bottom: 20px;
+}
+
+.contact-form .input-group-lg > textarea {
+  height: 150px;
+}
+
+.contact-form .input-group-lg > .form-control {
+  font-size: 16px;
+}

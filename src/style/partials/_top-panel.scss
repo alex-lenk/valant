@@ -1,0 +1,76 @@
+.top-panel {
+  padding: 20px 0 15px;
+  background-color: #fff;
+  .logo-area {
+    img {
+      display: block;
+      margin: 0 auto 15px;
+    }
+  }
+  .search-area {
+    padding-top: 10px;
+    p {
+      margin-bottom: 20px;
+    }
+    .input-group-addon {
+      padding: 0;
+      button {
+        padding: 6px 12px;
+        background-color: transparent;
+        border: 0;
+      }
+    }
+  }
+  .contacts {
+    margin: 0;
+    padding-left: 0;
+    padding-top: 5px;
+    text-align: right;
+    list-style: none;
+    .phone,
+    .write-us {
+      @include transition(all .3s ease);
+      .phone:hover,
+      .write-us:hover,
+      &:hover {
+        color: #ff6100;
+        .fa {
+          color: #2e4a67;
+        }
+      }
+    }
+    .fa {
+      margin-left: 10px;
+      color: #ff6100;
+      font-size: 24px;
+      @include transition(all .3s ease);
+      @include to('m') {
+        display: none;
+      }
+    }
+    .phone {
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: #444;
+      display: inline-block;
+      .fa {
+        font-size: 28px;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .write-us {
+      padding: 0;
+      border: 0;
+      background-color: transparent;
+      @include to('m') {
+        color: #ff8401;
+        border-bottom: 1px solid;
+        &:hover {
+          border-color: transparent;
+        }
+      }
+    }
+  }
+}
